@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="UTF-8">
+<head>
+	<title>Scratch</title>
+	<link rel="stylesheet" href="TutorielsCSS.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+</head>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    </ul><br><br>
+<body>
+    <h1>SCRATCH</h1>
+    <div>
+        <ol>
+            <li><a href="#mouvement">Mouvement</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#Fin du jeu">Fin du jeu</a></li>
+        </ol>
+    </div>
+    <br><br><br>   
+    <h3>Vous pouvez consulter tous les tutoriels sur Scratch sur cette page. On vous présente quelques notions de base 
+        pour que vous puissiez comprendre comment ça marche et comment coder. Si vous avez pas Scratch 
+        <a href="https://scratch.mit.edu/" target="_Blank">cliquez ici.</a> Scratch
+        est un site gratuit de programmation avec le langage JavaScript simplifier.</h3>
+    <img src="https://ekb.ligarobotov.ru/wp-content/uploads/sites/7/2020/02/scratch_logo.png" alt="Scratch Logo" height="200px" width="240px" style="float: right">
+
+    <a name="mouvement"></a>
+    <h2>Mouvement</h2>
+    <p>On va créer un jeu qui a comme but de collecter le plus de pommes possibles dans un temps limité. <br> On commencera par créer un personnage
+    (qui s’appelle “Sprite” en scratch) qui pourra bouger dans notre niveau.</p><br>
+    <img src="Scratch1.png" alt="First Step" height="400px" width="420px" class="center">
+
+    <p>Comme vous le voyez, ce projet est intact. On va commencer en cliquant la bulle en bas a droite avec un petit chat comme icône et 
+    choisir un personnage.</p>
+    <img src="Step2.png" alt="Step2" height="300px" width="400px" class="center">
+
+    <p>Je vais choisir le chat avec la vue d'en haut, vous pouvez choisir le personnage que vous voulez. <br> N'OUBLIEZ pas d'éliminer le 
+    vieu chat, il ne sert a rien.<br>
+    Maintenant, on va passer à la partie la plus 
+    intéressante! Coder le mouvement du chat. <br><br>
+    On commence par mettre la tête du programme, le bloc “quand DRAPEAU est cliqué” et juste après on met “répéter indéfiniment” 
+    pour que le script marche toujours et tous ce qu’on va mettre dedans, Scratch le fera toujours. 
+    Ce block est très important sur scratch car c’est le plus utiliser dans les jeux mais à l’école on ne l’utilise presque pas. </p>
+    <img src="Step3.png" alt="Step3" height="150px" width="150px" class="step">
+
+    <p>Maintenant on fera le mouvement. On a besoin d'un script qui détecte si on appuis la flèche en haut et puis pour
+    que le chat avance de X pixels. 
+    Donc on prend le script “Si … alors” et on le met dans notre script principal. Et on ajoute “Touche flèche de haut
+    pressée” dans le script <br> “Si … alors”. Ajoutez le block “Avancer de … pas”, le nombre de pas peut être quelconque,
+    ça dépend de la vitesse que vous voulez mettre au chat. </p>
+    <img src="Step4.png" alt="Step4" height="500px" width="900px" class="center">
+
+    <p>Tester le script! Le chat peut avancer, mais il ne peut pas tourner. On va donc créer un autre script qui se 
+    chargera de cette tâche. On met le block “Quand DRAPEAU est cliqué”, le block “répéter indéfiniment”, le block 
+    “Si … alors” et maintenant on doit ajouter le block “Touche flèche droite pressée”. Ça nous donne: Si flèche droite
+    pressée, alors … . Il faut que notre chat puisse tourner donc on ajoute le block <br> “Tourner à droite … degrés”. Comme 
+    avant, le nombre de degrés dépend de la vitesse que vous mettez au chat. </p>
+    <img src="Step5.png" alt="Step5" height="500px" width="900px" class="center">
+
+    <p>Le chat peut tourner que dans une direction,  cela ne convient pas. Donc on fera la même chose mais pour la gauche, 
+    il suffit de dupliquer le script (click droit -> dupliquer), changer
+    “Si flèche droite” à “Si flèche gauche” et changer la direction de rotation; de droite à gauche.</p>
+    <img src="Step6.png" alt="Step6" height="500px" width="600px" class="center">
+
+    <p>Maintenant notre chat a un mouvement complet! <br>Faites le chat un peu plus petit dans la section des “Costumes” comme ci-dessous. </p>
+    <img src="Step7.png" alt="Step7" height="500px" width="700px" class="center">
+
+    <a name="variables"></a>
+
+    <h2>Variables</h2>
+    <p>Maintenant on va commencer par coder le “score” avec des variables. Cette partie peut être un peu compliquer pour les nouveaux mais 
+    pour ne pas vous perdre vous pouvez vous aidez des vidéos sur l’internet, par exemples <a href="https://www.youtube.com/watch?v=RIQho4olcGE"
+    target="_Blank" style="text-decoration: none;">
+    celle-là (cliquez ici)</a>,  qui explique comment faire un score.</p>
+
+    <p>On commence par créer une variable qui s’appeler “Score”. </p>
+    <img src="Step8.png" alt="Step8" height="500px" width="550px" class="center">
+
+    <p>Eliminez toutes les autres variables que vous avez (sauf le Score) comme “ma variable” (clique droit -> supprimer la variable ...)</p>
+    <img src="Step9.png" alt="Step9" height="300px" width="600px" class="center">
+
+    <p>Pour que le score monte, le chat doit toucher un Sprite, donc on va créer un autre Sprite. Je vais choisir une pomme.</p>
+    <img src="Step10.png" alt="Step10" height="300px" width="300px" class="step">
+
+    <p>Maintenant il faut que quand le chat touche la pomme, le score change par 1, et en 
+    même temps elle se téléporte vers une position aléatoire. On commence par mettre “si touche chat alors ajouter 1 à score” et juste après 
+    ce script on ajoute, “aller à position aléatoire”. Tous ces blocks se trouve dans: “Mouvements”, “Capteurs” et “Variables”. Juste avant, 
+    quand le programme commence, on doit mettre le block “mettre score a 0” pour que le score puisse se remettre à 0 quand on commence le jeu. </p>
+    <img src="Step11.png" alt="Step11" height="300px" width="265px" class="step">
+
+    <p>Faites la pomme plus petite par rapport au chat.</p>
+
+    <p>On a un système de score fonctionnel! Maintenant il nous reste juste de programmer un chronomètre pour que le jeu se termine. 
+    Heureusement Scratch a fait déjà le travail. Dans “capteurs” il y a un chronomètre, cliquez sur le petit rectangle à côté de lui et il 
+    va apparaitre. Maintenant il faut créer une autre variable qui s’appelle “temps”. On va aussi créer un autre script, il se compose de: 
+    “mettre temps à chronomètre”. </p>
+    <img src="Step12.png" alt="Step12" height="200px" width="300px" class="step">
+
+    <p>Tester le jeu. Il marche mais il ne finit jamais! C'est pour ça qu’on va mettre dans le script du score, une petite modification: </p>
+    <img src="Step13.png" alt="Step13" height="320px" width="300px" class="step">
+
+    <a name="Fin du jeu"></a>
+
+    <h2>Fin du jeu</h2>
+
+    <p>Maintenant notre jeu s’arrête quand 20s sont passés ! Le code est fini, il vous reste donc de changer le fond de la scène.</p>
+    <img src="Step14.png" alt="Step14" height="400px" width="450px" class="center">
+
+    <p>Félicitation （*＾-＾*）! Vous avez fini votre jeu. La manière qui est présenter n’est pas très bonne par rapport au code mais si vous pensez faire un 
+    autre jeu regarder des tutoriels sur YouTube ou sinon regarder le programme d’autre jeu par exemple:</p>
+    <ol class="BeforeNumbers">
+        <li><a href="https://scratch.mit.edu/projects/389464290/" target="_Blank" style="text-decoration: underline;">Getting Over it par Griffpatch</a></li>
+        <li><a href="https://scratch.mit.edu/projects/443516706/" target="_Blank" style="text-decoration: underline;">Soccer shots! par darkknightmc</a></li>
+        <li><a href="https://scratch.mit.edu/projects/408325281/" target="_Blank" style="text-decoration: underline;">3D city par yarek12</a></li>
+    </ol>
+</body>
